@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jóvenes en Acción - Perfiles</title>
+
+    <style>
+        /* Los estilos CSS se agregarán posteriormente */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>JÓVENES EN ACCIÓN</h1>
+        <p>Construyendo un mejor futuro</p>
+    </header>
+
+    <main>
+
+        <aside class="menu">
+            <h2>Integrantes</h2>
+
+            <button onclick="mostrarPerfil(0)">Integrante 1</button>
+            <button onclick="mostrarPerfil(1)">Integrante 2</button>
+            <button onclick="mostrarPerfil(2)">Integrante 3</button>
+        </aside>
+
+        <section class="contenido">
+
+            <div class="portada">
+                <div class="avatar" id="avatar">I1</div>
+                <div>
+                    <h2 id="nombre">Nombre del integrante</h2>
+                    <p id="edad">Edad:</p>
+                    <p id="ciudad">Ciudad:</p>
+                    <p id="ministerio">Ministerio:</p>
+                </div>
+            </div>
+
+            <div class="tarjetas">
+
+                <article class="tarjeta">
+                    <h3>Información personal</h3>
+                    <div id="personal"></div>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Formación académica</h3>
+                    <div id="academica"></div>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Sobre mí</h3>
+                    <div id="descripcion"></div>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Habilidades y fortalezas</h3>
+                    <div id="habilidades"></div>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Información de contacto</h3>
+                    <div id="contacto"></div>
+                </article>
+
+                <article class="tarjeta">
+                    <h3>Áreas de especialización</h3>
+                    <div id="especialidades"></div>
+                </article>
+
+            </div>
+
+            <div class="navegacion">
+                <button onclick="cambiarPerfil(-1)">
+                    ← Perfil anterior
+                </button>
+
+                <span id="contador">Integrante 1 de 3</span>
+
+                <button onclick="cambiarPerfil(1)">
+                    Siguiente perfil →
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        // Aquí se agregará el JavaScript para mostrar los perfiles.
+    </script>
+
+</body>
+</html>
