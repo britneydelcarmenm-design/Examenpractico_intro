@@ -8,6 +8,239 @@
 
     <style>
         /* Los estilos CSS se agregarán posteriormente */
+
+/* CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f1f5fb;
+    color: #172b4d;
+}
+
+
+/* ENCABEZADO */
+
+header {
+    background: #102b50;
+    color: white;
+    padding: 22px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+header h1 {
+    font-size: 25px;
+    letter-spacing: 1px;
+}
+
+header p {
+    font-size: 14px;
+}
+
+
+/* DISTRIBUCIÓN PRINCIPAL */
+
+main {
+    display: flex;
+    min-height: 85vh;
+}
+
+
+/* MENÚ DE INTEGRANTES */
+
+.menu {
+    width: 210px;
+    background: white;
+    padding: 25px 15px;
+    border-right: 1px solid #dce4f0;
+}
+
+.menu h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #173d70;
+}
+
+.menu button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 12px;
+    border: 1px solid #dce4f0;
+    border-radius: 9px;
+    background: #edf4ff;
+    color: #145db0;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background: #cfe3ff;
+}
+
+
+/* CONTENIDO */
+
+.contenido {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+}
+
+
+/* PORTADA DEL PERFIL */
+
+.portada {
+    background: linear-gradient(120deg, #1766b5, #dcecff);
+    padding: 30px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.portada h2 {
+    font-size: 29px;
+    margin-bottom: 12px;
+    color: #102b50;
+}
+
+.portada p {
+    margin: 7px 0;
+    font-size: 15px;
+}
+
+
+/* AVATAR */
+
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: white;
+    border: 5px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1766b5;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* TARJETAS DE INFORMACIÓN */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px #00000012;
+}
+
+.tarjeta h3 {
+    background: #102b50;
+    color: white;
+    padding: 15px;
+    font-size: 17px;
+}
+
+.tarjeta div {
+    padding: 17px;
+    line-height: 1.8;
+    overflow-wrap: anywhere;
+}
+
+
+/* NAVEGACIÓN ENTRE PERFILES */
+
+.navegacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 25px;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.navegacion button {
+    padding: 13px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #145db0;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.navegacion button:hover {
+    background: #102b50;
+}
+
+#contador {
+    font-weight: bold;
+    color: #173d70;
+}
+
+
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 750px) {
+
+    main {
+        flex-direction: column;
+    }
+
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .menu h2 {
+        width: 100%;
+    }
+
+    .menu button {
+        flex: 1;
+        width: auto;
+    }
+
+    .contenido {
+        padding: 15px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .portada {
+        padding: 20px;
+    }
+
+    .portada h2 {
+        font-size: 23px;
+    }
+
+}
+
     </style>
 </head>
 
