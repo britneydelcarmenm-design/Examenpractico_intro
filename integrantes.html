@@ -471,8 +471,8 @@ function mostrarPerfil(indice) {
 
     // HABILIDADES
 
-    document.getElementById("habilidades").textContent =
-        persona.Habilidades.join(" • ");
+document.getElementById("habilidades").innerHTML =
+    persona.Habilidades.join("<br>");
 
 
     // INFORMACIÓN DE CONTACTO
@@ -484,8 +484,8 @@ function mostrarPerfil(indice) {
 
     // ÁREAS DE ESPECIALIZACIÓN
 
-    document.getElementById("especialidades").textContent =
-        persona.Especialidades.join(" • ");
+document.getElementById("especialidades").innerHTML =
+    persona.Especialidades.join("<br>");
 
 
     // CONTADOR DE PERFILES
