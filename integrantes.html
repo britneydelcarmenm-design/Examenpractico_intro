@@ -324,7 +324,195 @@ main {
     </main>
 
     <script>
-        // Aquí se agregará el JavaScript para mostrar los perfiles.
+        // INFORMACIÓN DE LOS INTEGRANTES
+
+const integrantes = [
+
+    {
+        Nombre: "Brendan Elkin Angel Peréz",
+        Edad: "18 años",
+        Ciudad: "General Antonio Elizalde",
+        Ministerio: "Ministerio de desarrollo económico y productivo",
+
+        Descripción:
+            "Soy una persona responsable, comprometida y perseverante. Me gusta aprender, trabajar en equipo y asumir nuevos retos. Me caracterizo por mi organización, iniciativa y disposición para mejorar tanto personal como profesionalmente.",
+
+        Estudios: "Educación superior (primer semestre)",
+        Institucion: "Universidad estatal de Milagro",
+        Carrera: "Ingeniería de Software",
+
+        Telefono: "0967234567",
+        Correo: "brendanperez@gmail.com",
+
+        Habilidades: [
+            "Trabajo en equipo",
+            "Comunicación efectiva",
+            "Aprendizaje rápido"
+        ],
+
+        Especialidades: [
+            "Análisis  y resolución de problemas de software",
+            "Bases de datos",
+            "Fundamentos de programación"
+        ]
+    },
+
+    {
+        Nombre: "Britney del Carmen Montoya Macias",
+        Edad: "18 años",
+        Ciudad: "Canton Naranjal",
+        Ministerio: "Ministerio de desarrollo económico y productivo",
+
+        Descripción:
+            "Soy una persona responsable, organizada y comprometida con las actividades que realizo. Me gusta aprender, trabajar en equipo y dar lo mejor de mí en cada tarea. Me caracterizo por mi disposición para seguir instrucciones, aportar ideas y tomar la iniciativa para liderar cuando sea necesario. Procuro mantener una actitud positiva, respetuosa y colaborativa",
+
+        Estudios: "Educación superior (primer semestre)",
+        Institucion: "Universidad estatal de Milagro",
+        Carrera: "Ingeniería de Software",
+
+        Telefono: "0985867894",
+        Correo: "montoyamacias@gmail.com",
+
+        Habilidades: [
+            "Trabajo en equipo",
+            "Liderazgo e iniciativa",
+            "Organización y responsabilidad"
+        ],
+
+        Especialidades: [
+            "Metodología ágil",
+            "Programación básica",
+            "Manejo de Git y GitHub"
+        ]
+    },
+
+    {
+        Nombre: "Bianka Ninoska Portilla Bravo",
+        Edad: "18 años",
+        Ciudad: "Duran",
+        Ministerio: "Ministerio de Educación, Cultura y Deporte",
+
+        Descripción:
+            "Me caracterizo por ser una persona, imparcial y comunicativa. Me gusta mantener el orden, trabajar en equipo y participar en diferentes actividades. Estoy siempre dispuesta a aprender y adquirir nuevos conocimientos que contribuyan a mi crecimiento personal y profesional.",
+
+        Estudios: "Educación superior (primer semestre)",
+        Institucion: "Universidad estatal de Milagro",
+        Carrera: "Ingeniería de Software",
+
+        Telefono: "0998765432",
+        Correo: "portillabravo@gmail.com",
+
+        Habilidades: [
+            "Trabajo en equipo",
+            "Adaptabilidad",
+            "Responsabilidad"
+        ],
+
+        Especialidades: [
+            "Programación",
+            "Desarrollo de software",
+            "Desarrollo web"
+        ]
+    }
+
+];
+
+// VARIABLE PARA CONTROLAR EL PERFIL ACTUAL
+
+let perfilActual = 0;
+
+
+// FUNCIÓN PARA MOSTRAR LA INFORMACIÓN
+
+function mostrarPerfil(indice) {
+
+    perfilActual = indice;
+
+    const persona = integrantes[indice];
+
+    document.getElementById("nombre").textContent =
+        persona.Nombre;
+
+    document.getElementById("avatar").textContent =
+        "I" + (indice + 1);
+
+    document.getElementById("edad").textContent =
+        "Edad: " + persona.Edad;
+
+    document.getElementById("ciudad").textContent =
+        "Ciudad: " + persona.Ciudad;
+
+    document.getElementById("ministerio").textContent =
+        "Ministerio: " + persona.Ministerio;
+
+
+    // INFORMACIÓN PERSONAL
+
+    document.getElementById("personal").innerHTML =
+        "<p><b>Nombre:</b> " + persona.Nombre + "</p>" +
+        "<p><b>Edad:</b> " + persona.Edad + "</p>" +
+        "<p><b>Ciudad:</b> " + persona.Ciudad + "</p>" +
+        "<p><b>Ministerio:</b> " + persona.Ministerio + "</p>";
+
+
+    // FORMACIÓN ACADÉMICA
+
+    document.getElementById("academica").innerHTML =
+        "<p><b>Nivel de estudios:</b> " + persona.Estudios + "</p>" +
+        "<p><b>Institución:</b> " + persona.Institucion + "</p>" +
+        "<p><b>Carrera:</b> " + persona.Carrera + "</p>";
+
+
+    // DESCRIPCIÓN PERSONAL
+
+    document.getElementById("descripcion").textContent =
+        persona.Descripción;
+
+
+    // HABILIDADES
+
+    document.getElementById("habilidades").textContent =
+        persona.Habilidades.join(" • ");
+
+
+    // INFORMACIÓN DE CONTACTO
+
+    document.getElementById("contacto").innerHTML =
+        "<p><b>Teléfono:</b> " + persona.Telefono + "</p>" +
+        "<p><b>Correo:</b> " + persona.Correo + "</p>";
+
+
+    // ÁREAS DE ESPECIALIZACIÓN
+
+    document.getElementById("especialidades").textContent =
+        persona.Especialidades.join(" • ");
+
+
+    // CONTADOR DE PERFILES
+
+    document.getElementById("contador").textContent =
+        "Integrante " + (indice + 1) + " de 3";
+
+}
+
+
+// FUNCIÓN PARA CAMBIAR DE PERFIL
+
+function cambiarPerfil(direccion) {
+
+    let nuevoPerfil = perfilActual + direccion;
+
+    if (nuevoPerfil < 0) {
+        nuevoPerfil = integrantes.length - 1;
+    }
+
+    if (nuevoPerfil >= integrantes.length) {
+        nuevoPerfil = 0;
+    }
+
+    mostrarPerfil(nuevoPerfil);
+
+}
     </script>
 
 </body>
